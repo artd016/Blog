@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BlogDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BlogEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="BlogDB.sysdiagrams" />
+    <EntitySet Name="Ustawienia" EntityType="BlogDB.Ustawienia" />
+    <EntitySet Name="Komentarze" EntityType="BlogDB.Komentarze" />
+    <EntitySet Name="Post" EntityType="BlogDB.Post" />
+    <EntitySet Name="Tagi" EntityType="BlogDB.Tagi" />
+    <AssociationSet Name="FK_Komentarze_Post" Association="BlogDB.FK_Komentarze_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Komentarze" EntitySet="Komentarze" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tagi_Tagi" Association="BlogDB.FK_Tagi_Tagi">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Tagi" EntitySet="Tagi" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Ustawienia">
+    <Key>
+      <PropertyRef Name="grupa" />
+      <PropertyRef Name="nazwa" />
+      <PropertyRef Name="wartosc" />
+    </Key>
+    <Property Name="grupa" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="nazwa" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="wartosc" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Komentarze">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="id_posta" Nullable="false" />
+    <Property Type="String" Name="tresc" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="autor" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="data_dodania" Nullable="false" />
+    <Property Type="Int32" Name="status" Nullable="false" />
+    <NavigationProperty Name="Post" Relationship="BlogDB.FK_Komentarze_Post" FromRole="Komentarze" ToRole="Post" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="data_dodania" Nullable="false" />
+    <Property Type="String" Name="tytul" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="tresc" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="data_modyfikacji" />
+    <Property Type="Int32" Name="status" Nullable="false" />
+    <NavigationProperty Name="Komentarze" Relationship="BlogDB.FK_Komentarze_Post" FromRole="Post" ToRole="Komentarze" />
+    <NavigationProperty Name="Tagi" Relationship="BlogDB.FK_Tagi_Tagi" FromRole="Post" ToRole="Tagi" />
+  </EntityType>
+  <EntityType Name="Tagi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id_posta" Nullable="false" />
+    <Property Type="String" Name="keywords" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Post" Relationship="BlogDB.FK_Tagi_Tagi" FromRole="Tagi" ToRole="Post" />
+  </EntityType>
+  <Association Name="FK_Komentarze_Post">
+    <End Type="BlogDB.Post" Role="Post" Multiplicity="1" />
+    <End Type="BlogDB.Komentarze" Role="Komentarze" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Komentarze">
+        <PropertyRef Name="id_posta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tagi_Tagi">
+    <End Type="BlogDB.Post" Role="Post" Multiplicity="1" />
+    <End Type="BlogDB.Tagi" Role="Tagi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tagi">
+        <PropertyRef Name="id_posta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BlogDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="BlogDBStoreContainer">
+          <EntitySet Name="Komentarze" EntityType="BlogDB.Store.Komentarze" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Post" EntityType="BlogDB.Store.Post" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="BlogDB.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tagi" EntityType="BlogDB.Store.Tagi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Ustawienia" EntityType="BlogDB.Store.Ustawienia" store:Type="Tables" store:Schema="dbo" store:Name="Ustawienia">
+            <DefiningQuery>SELECT 
+      [Ustawienia].[grupa] AS [grupa], 
+      [Ustawienia].[nazwa] AS [nazwa], 
+      [Ustawienia].[wartosc] AS [wartosc]
+      FROM [dbo].[Ustawienia] AS [Ustawienia]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Komentarze_Post" Association="BlogDB.Store.FK_Komentarze_Post">
+            <End Role="Post" EntitySet="Post" />
+            <End Role="Komentarze" EntitySet="Komentarze" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tagi_Tagi" Association="BlogDB.Store.FK_Tagi_Tagi">
+            <End Role="Post" EntitySet="Post" />
+            <End Role="Tagi" EntitySet="Tagi" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Komentarze">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_posta" Type="int" Nullable="false" />
+          <Property Name="tresc" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="autor" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="data_dodania" Type="date" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="data_dodania" Type="datetime" Nullable="false" />
+          <Property Name="tytul" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="tresc" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="data_modyfikacji" Type="date" />
+          <Property Name="status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tagi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id_posta" Type="int" Nullable="false" />
+          <Property Name="keywords" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Blog.dbo.Ustawienia' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Ustawienia">
+          <Key>
+            <PropertyRef Name="grupa" />
+            <PropertyRef Name="nazwa" />
+            <PropertyRef Name="wartosc" />
+          </Key>
+          <Property Name="grupa" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="nazwa" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="wartosc" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Komentarze_Post">
+          <End Role="Post" Type="BlogDB.Store.Post" Multiplicity="1" />
+          <End Role="Komentarze" Type="BlogDB.Store.Komentarze" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Post">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Komentarze">
+              <PropertyRef Name="id_posta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tagi_Tagi">
+          <End Role="Post" Type="BlogDB.Store.Post" Multiplicity="1" />
+          <End Role="Tagi" Type="BlogDB.Store.Tagi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Post">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Tagi">
+              <PropertyRef Name="id_posta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BlogDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="BlogEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="BlogDB.sysdiagrams" />
+          <EntitySet Name="Ustawienia" EntityType="BlogDB.Ustawienia" />
+          <EntitySet Name="Komentarze" EntityType="BlogDB.Komentarze" />
+          <EntitySet Name="Post" EntityType="BlogDB.Post" />
+          <EntitySet Name="Tagi" EntityType="BlogDB.Tagi" />
+          <AssociationSet Name="FK_Komentarze_Post" Association="BlogDB.FK_Komentarze_Post">
+            <End Role="Post" EntitySet="Post" />
+            <End Role="Komentarze" EntitySet="Komentarze" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tagi_Tagi" Association="BlogDB.FK_Tagi_Tagi">
+            <End Role="Post" EntitySet="Post" />
+            <End Role="Tagi" EntitySet="Tagi" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Ustawienia">
+          <Key>
+            <PropertyRef Name="grupa" />
+            <PropertyRef Name="nazwa" />
+            <PropertyRef Name="wartosc" />
+          </Key>
+          <Property Name="grupa" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="nazwa" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="wartosc" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Komentarze">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="id_posta" Nullable="false" />
+          <Property Type="String" Name="tresc" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="autor" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="data_dodania" Nullable="false" />
+          <Property Type="Int32" Name="status" Nullable="false" />
+          <NavigationProperty Name="Post" Relationship="BlogDB.FK_Komentarze_Post" FromRole="Komentarze" ToRole="Post" />
+        </EntityType>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="data_dodania" Nullable="false" />
+          <Property Type="String" Name="tytul" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="tresc" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="data_modyfikacji" />
+          <Property Type="Int32" Name="status" Nullable="false" />
+          <NavigationProperty Name="Komentarze" Relationship="BlogDB.FK_Komentarze_Post" FromRole="Post" ToRole="Komentarze" />
+          <NavigationProperty Name="Tagi" Relationship="BlogDB.FK_Tagi_Tagi" FromRole="Post" ToRole="Tagi" />
+        </EntityType>
+        <EntityType Name="Tagi">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id_posta" Nullable="false" />
+          <Property Type="String" Name="keywords" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Post" Relationship="BlogDB.FK_Tagi_Tagi" FromRole="Tagi" ToRole="Post" />
+        </EntityType>
+        <Association Name="FK_Komentarze_Post">
+          <End Type="BlogDB.Post" Role="Post" Multiplicity="1" />
+          <End Type="BlogDB.Komentarze" Role="Komentarze" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Post">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Komentarze">
+              <PropertyRef Name="id_posta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tagi_Tagi">
+          <End Type="BlogDB.Post" Role="Post" Multiplicity="1" />
+          <End Type="BlogDB.Tagi" Role="Tagi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Post">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Tagi">
+              <PropertyRef Name="id_posta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BlogDBStoreContainer" CdmEntityContainer="BlogEntities">
+          <EntitySetMapping Name="sysdiagrams"><EntityTypeMapping TypeName="BlogDB.sysdiagrams"><MappingFragment StoreEntitySet="sysdiagrams">
+            <ScalarProperty Name="name" ColumnName="name" />
+            <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+            <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+            <ScalarProperty Name="version" ColumnName="version" />
+            <ScalarProperty Name="definition" ColumnName="definition" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Ustawienia"><EntityTypeMapping TypeName="BlogDB.Ustawienia"><MappingFragment StoreEntitySet="Ustawienia">
+            <ScalarProperty Name="grupa" ColumnName="grupa" />
+            <ScalarProperty Name="nazwa" ColumnName="nazwa" />
+            <ScalarProperty Name="wartosc" ColumnName="wartosc" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Komentarze">
+            <EntityTypeMapping TypeName="BlogDB.Komentarze">
+              <MappingFragment StoreEntitySet="Komentarze">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="data_dodania" ColumnName="data_dodania" />
+                <ScalarProperty Name="autor" ColumnName="autor" />
+                <ScalarProperty Name="tresc" ColumnName="tresc" />
+                <ScalarProperty Name="id_posta" ColumnName="id_posta" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Post">
+            <EntityTypeMapping TypeName="BlogDB.Post">
+              <MappingFragment StoreEntitySet="Post">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="data_modyfikacji" ColumnName="data_modyfikacji" />
+                <ScalarProperty Name="tresc" ColumnName="tresc" />
+                <ScalarProperty Name="tytul" ColumnName="tytul" />
+                <ScalarProperty Name="data_dodania" ColumnName="data_dodania" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tagi">
+            <EntityTypeMapping TypeName="BlogDB.Tagi">
+              <MappingFragment StoreEntitySet="Tagi">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="keywords" ColumnName="keywords" />
+                <ScalarProperty Name="id_posta" ColumnName="id_posta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="BlogEnt">
+        <EntityTypeShape EntityType="BlogDB.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" Height="1.7566536458333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlogDB.Ustawienia" Width="1.5" PointX="5.75" PointY="3.75" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlogDB.Komentarze" Width="1.5" PointX="3" PointY="7" Height="2.0853483072916674" />
+        <EntityTypeShape EntityType="BlogDB.Post" Width="1.5" PointX="0.75" PointY="8.25" Height="2.2496956380208317" />
+        <EntityTypeShape EntityType="BlogDB.Tagi" Width="1.5" PointX="3" PointY="9.875" Height="1.7566536458333317" />
+        <AssociationConnector Association="BlogDB.FK_Komentarze_Post" >
+          <ConnectorPoint PointX="2.25" PointY="8.6676741536458337" />
+          <ConnectorPoint PointX="3" PointY="8.6676741536458337" />
+        </AssociationConnector>
+        <AssociationConnector Association="BlogDB.FK_Tagi_Tagi" >
+          <ConnectorPoint PointX="2.25" PointY="10.187347819010416" />
+          <ConnectorPoint PointX="3" PointY="10.187347819010416" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
