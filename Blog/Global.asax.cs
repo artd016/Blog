@@ -12,25 +12,61 @@ namespace Blog
 
     public class MvcApplication : System.Web.HttpApplication
     {
+        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+        {
+            filters.Add(new HandleErrorAttribute());
+        }
+
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute("PageingY",
+                "{controller}/{action}/{year}/Page/{page}",
+                new { controller = "Administracja", action = "Post" },
+                new { year = @"\d{4}" });
+
+            routes.MapRoute("PageingYM",
+               "{controller}/{action}/{year}/{month}/Page/{page}",
+               new { controller = "Administracja", action = "Post" },
+               new { year = @"\d{4}", month = @"\d{2}" });
+
+            routes.MapRoute("PageingYMD",
+                "{controller}/{action}/{year}/{month}/{day}/Page/{page}",
+                new { controller = "Administracja", action = "Post" },
+                new { year = @"\d{4}", month = @"\d{2}", day = @"\d{2}" });
+
+            routes.MapRoute(
+                "Pageing", // Route name
+                "{controller}/{action}/Page/{page}", // URL with parameters
+                new { controller = "Administracja", action = "WyswietlPosty" } // Parameter defaults
+            );
+
+            routes.MapRoute("Post",
+                "{controller}/{action}/{year}/{month}/{day}/{id}",
+                new { controller = "Administracja", action = "Post" },
+                new { year = @"\d{4}", month = @"\d{2}", day = @"\d{2}" });
+
+            
+            routes.MapRoute("blog2",
+                "{controller}/{action}/{year}",
+                new { controller = "Administracja", action = "Post" },
+                new { year = @"\d{4}" });           
+
+            routes.MapRoute("blog1",
+               "{controller}/{action}/{year}/{month}",
+               new { controller = "Administracja", action = "Post" },
+               new { year = @"\d{4}", month = @"\d{2}" });
+
+            routes.MapRoute("blog",
+                "{controller}/{action}/{year}/{month}/{day}",
+                new { controller = "Administracja", action = "Post" },
+                new { year = @"\d{4}", month = @"\d{2}", day = @"\d{2}" });
 
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
                 new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-            );
-            /*routes.MapRoute(
-                "Detale", // Route name
-                "{controller}/{action}/{year}/{month}/{day}", // URL with parameters
-                new { controller = "Admin", action = "Detale",year=@"\d{4}", month=@"\d{2}", day=@"\d{2}"}
-            );*/
-
-            routes.MapRoute(
-                "Detale", // Route name
-                "{controller}/{action}/{year}", // URL with parameters
-                new { controller = "Admin", action = "Detale",year=@"\d{4}"}
             );
         }
 
@@ -38,6 +74,7 @@ namespace Blog
         {
             AreaRegistration.RegisterAllAreas();
 
+            RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }
     }

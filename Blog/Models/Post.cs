@@ -1,19 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
+using System.ComponentModel;
+using System.Web.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 namespace Blog.Models
 {
+    [MetadataType(typeof(PostMetaData))]
     public partial class Post
     {
-      /*public int id{get; set;}
-      public DateTime data_dodania{get; set;}
-      public string tytul{get; set;}
-      public string tresc{get; set;}
-      public int status{get; set;}
-      public DateTime data_modyfikacji{get; set;}
-      public Tagi Tagi{get; set;}
-      public Komentarze Komentarze{get; set;}*/
+        public class PostMetaData
+        {
+             public int id{get; set;}
+             public DateTime data_dodania { get; set; }
+             [DisplayName("Tytuł")]
+             [Required(ErrorMessage = "Tytuł jest wymagany")]
+             [StringLength(150,ErrorMessage="Za długi tytuł")]
+             public String tytul { get; set; }
+             [DisplayName("Treść")]
+             [Required(ErrorMessage = "Treść jest wymagana")]
+             public String tresc { get; set; }
+             public DateTime data_modyfikacji { get; set; }
+             [DisplayName("Status")]
+             public int status { get; set; }
+        }
     }
 }

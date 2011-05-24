@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BlogModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BlogEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Komentarze" EntityType="BlogModel.Komentarze" />
+    <EntitySet Name="Post" EntityType="BlogModel.Post" />
+    <EntitySet Name="sysdiagrams" EntityType="BlogModel.sysdiagrams" />
+    <EntitySet Name="Tagi" EntityType="BlogModel.Tagi" />
+    <EntitySet Name="Ustawienia" EntityType="BlogModel.Ustawienia" />
+    <AssociationSet Name="FK_Komentarze_Post" Association="BlogModel.FK_Komentarze_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Komentarze" EntitySet="Komentarze" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tagi_Tagi" Association="BlogModel.FK_Tagi_Tagi">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Tagi" EntitySet="Tagi" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Komentarze">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_posta" Type="Int32" Nullable="false" />
+    <Property Name="tresc" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="autor" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="data_dodania" Type="DateTime" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Post" Relationship="BlogModel.FK_Komentarze_Post" FromRole="Komentarze" ToRole="Post" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="data_dodania" Type="DateTime" Nullable="false" />
+    <Property Name="tytul" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="tresc" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="data_modyfikacji" Type="DateTime" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Komentarze" Relationship="BlogModel.FK_Komentarze_Post" FromRole="Post" ToRole="Komentarze" />
+    <NavigationProperty Name="Tagi" Relationship="BlogModel.FK_Tagi_Tagi" FromRole="Post" ToRole="Tagi" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tagi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id_posta" Type="Int32" Nullable="false" />
+    <Property Name="keywords" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Post" Relationship="BlogModel.FK_Tagi_Tagi" FromRole="Tagi" ToRole="Post" />
+  </EntityType>
+  <EntityType Name="Ustawienia">
+    <Key>
+      <PropertyRef Name="grupa" />
+      <PropertyRef Name="nazwa" />
+      <PropertyRef Name="wartosc" />
+    </Key>
+    <Property Name="grupa" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="nazwa" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="wartosc" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Komentarze_Post">
+    <End Role="Post" Type="BlogModel.Post" Multiplicity="1" />
+    <End Role="Komentarze" Type="BlogModel.Komentarze" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Komentarze">
+        <PropertyRef Name="id_posta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tagi_Tagi">
+    <End Role="Post" Type="BlogModel.Post" Multiplicity="1" />
+    <End Role="Tagi" Type="BlogModel.Tagi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tagi">
+        <PropertyRef Name="id_posta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -10,8 +10,11 @@
         Use the form below to change your password. 
     </p>
     <p>
-        New passwords are required to be a minimum of <%: ViewData["PasswordLength"] %> characters in length.
+        New passwords are required to be a minimum of <%: ViewBag.PasswordLength %> characters in length.
     </p>
+
+    <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
+    <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>" type="text/javascript"></script>
 
     <% using (Html.BeginForm()) { %>
         <%: Html.ValidationSummary(true, "Password change was unsuccessful. Please correct the errors and try again.") %>

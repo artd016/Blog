@@ -5,9 +5,9 @@ to use a different color start by replacing all instances of
 ----------------------------------------------------------*/
 body
 {
-    background-color: #5c87b2;
-    font-size: .75em;
-    font-family: Verdana, Helvetica, Sans-Serif;
+    background-color: #00e541;
+    font-size: 75%;
+    font-family: Verdana, Tahoma, Arial, "Helvetica Neue", Helvetica, Sans-Serif;
     margin: 0;
     padding: 0;
     color: #696969;
@@ -43,19 +43,17 @@ p, ul
 h1, h2, h3, h4, h5, h6
 {
     font-size: 1.5em;
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #696969;
 }
 
 h1
 {
-    font-size: 2em;
+    font-size: 1.6em;
     padding-bottom: 0;
-    margin-bottom: 0;
 }
 h2
 {
-    padding: 0 0 10px 0;
+    /*padding: 0 0 10px 0;*/
 }
 h3
 {
@@ -91,6 +89,7 @@ page width. Or, you can specify an exact pixel width. */
 
 #header
 {
+    background-image: url(styl86.jpg);
     position: relative;
     margin-bottom: 0px;
     color: #000;
@@ -102,17 +101,16 @@ page width. Or, you can specify an exact pixel width. */
     font-weight: bold;
     padding: 5px 0;
     margin: 0;
-    color: #fff;
-    border: none;
+    color: yellow;
     line-height: 2em;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 32px !important;
+    margin: 30px;
 }
 
 #main
 {
-    padding: 30px 30px 15px 30px;
-    background-color: #fff;
+    padding: 10px 30px 15px 30px;
+    background-color: #eeffff;
     margin-bottom: 30px;
     _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
 }
@@ -181,31 +179,60 @@ ul#menu li.selected a
     color: #000;
 }
 
+/* UI MENU
+--------------------------------------------------*/
+.ui-menu
+{
+    width: 300px;
+}
+
+.ui-menu-item{
+    background-color: #eeffff;
+    color: blue;
+    list-style: none outside none;
+    max-width: 200px;
+    padding-left: 10px;
+}
+
+.ui-menu-item:hover{
+    background-color: #8de5a6;
+}
+
+.ui-menu-item a{
+    cursor:pointer;
+}
+
+.ui-menu-item a:hover{
+    color: blue;
+}
+
+
 /* FORM LAYOUT ELEMENTS   
 ----------------------------------------------------------*/
 
 fieldset 
 {
-    margin: 1em 0;
-    padding: 1em;
-    border: 1px solid #CCC;
-}
-
-fieldset p 
-{
-    margin: 2px 12px 10px 10px;
+    border:0px solid #00a2e5;
+    border-top: 1px solid #00a2e5;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.1em 0;
 }
 
 legend 
 {
-    font-size: 1.1em;
-    font-weight: 600;
-    padding: 2px 4px 8px 4px;
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 300px;
+    min-width: 300px;
 }
 
 input[type="text"] 
 {
-    width: 200px;
+    width: 300px;
     border: 1px solid #CCC;
 }
 
@@ -220,14 +247,14 @@ input[type="password"]
 
 table 
 {
-  border: solid 1px #e8eef4;
+  border: solid 0px #e8eef4;
   border-collapse: collapse;
 }
 
 table td 
 {
   padding: 5px;   
-  border: solid 1px #e8eef4;
+  border: solid 0px #e8eef4;
 }
 
 table th
@@ -235,7 +262,7 @@ table th
   padding: 6px 5px;
   text-align: left;
   background-color: #e8eef4; 
-  border: solid 1px #e8eef4;   
+  border: solid 0px #e8eef4;   
 }
 
 /* MISC  
@@ -268,13 +295,14 @@ div#title
     display:block;
     text-align:right;
     margin:10px;
-    color:White;
+    color:blue;
 }
 
 #logindisplay a:link
 {
-    color: white;
+    color: blue;
     text-decoration: underline;
+    background: #00e541;
 }
 
 #logindisplay a:visited
@@ -321,11 +349,15 @@ div#title
 /* Styles for editor and display helpers
 ----------------------------------------------------------*/
 .display-label,
-.editor-label,
+.editor-label
+{
+    margin: 1em 0 0 0;
+}
+
 .display-field,
 .editor-field
 {
-    margin: 0.5em 0;
+    margin:0.5em 0 0 0;
 }
 
 .text-box

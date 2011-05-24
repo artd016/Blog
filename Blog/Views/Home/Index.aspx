@@ -1,38 +1,59 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Blog.Models.Post>>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Index
+    Wyświetl posty
 </asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-    <h1>Blog</h1>
-
-
-
-    <% foreach (var item in Model) { %>
-    
-    <%if(item.status==1){ %>
+    <h2>Wyświetl posty</h2>
+    <%:ViewData["komunikat"] %>
+    <% foreach (var item in Model)
+       { %>
     <fieldset>
+        <h1>
+        <%int y=item.data_dodania.Year; %>
+        <%string m=Convert.ToString(item.data_dodania.Month); %>
+        <%string d = Convert.ToString(item.data_dodania.Day); %>
+        <%if (m.Length == 1) m="0"+m; %>
+        <%if (d.Length == 1) d="0"+d; %>
+            <%: Html.ActionLink(item.tytul as string, "Post" + "/" + y + "/" + m + "/" + d, new { id = item.tytul.Replace(' ', '_') })%></h1>
+        <p>
+            <%if ((item.tresc as string).Length > 99)
+              { %>
+            <%: (item.tresc as string).Remove(98)%>
+            ...<br />
+            <%:Html.ActionLink("Więcej", "Post" + "/" + y + "/" + m + "/" + d, new { id = item.tytul.Replace(' ', '_') })%>
+            <%}
+              else
+              {%>
+            <%: item.tresc%>
+            <% }%></p>
+        <%: String.Format("{0:yyyy-MM-dd}", item.data_dodania) %>
+        <%if (item.data_modyfikacji != null)
+          { %>
+        <%: String.Format("{0:yyyy-MM-dd}}", item.data_modyfikacji)%>
+        <%} %>
+        <%if (item.status == 0)
+          { %>
+        <p>
+            Opublikowany</p>
+        <%}
+          else
+          { %>
+        <p>
+            Ukryty</p>
+        <%} %>
 
-            <h1>
-                <%:  Html.ActionLink(item.tytul, "Delete", new { id = item.id })%>
-            </h1>
-            <p>
-                <%: item.tresc %>
-            </p>
-            <button><%: Html.ActionLink("Więcej...", "Delete", new { id=item.id })%>
-            </button>
-            <h5>
-                <%: String.Format("{0:g}", item.data_dodania) %>
-                <%: String.Format("{0:g}", item.data_modyfikacji) %>
-            </h5>
-
-        </fieldset>
+    </fieldset>
     <% } %>
+    <% if (Model.HasPreviousPage)
+       { %>
+    <%: Html.RouteLink("<<<",
+                   "Pageing",
+new { page=(Model.PageIndex-1) }) %>
     <% } %>
-
-
-
+    <% if (Model.HasNextPage)
+       { %>
+    <%: Html.RouteLink(">>>", "Pageing",
+new { page = (Model.PageIndex + 1) })%>
+    <% } %>
 </asp:Content>
-
