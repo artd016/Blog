@@ -4,7 +4,7 @@
     Wyświetl posty
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    
+ 
         <h2>Wyświetl posty z dnia <%:ViewData["data"]%></h2>
         <h1><%:ViewData["komunikat"] %></h1>
     <p>
@@ -12,6 +12,7 @@
     </p>
     <% foreach (var item in Model)
        { %>
+       
     <fieldset>
         <h1>
             <%int y=item.data_dodania.Year; %>
@@ -49,6 +50,7 @@
         <%: Html.ActionLink("Edytuj post", "Edit", new { id=item.id }) %>
         <%: Html.ActionLink("Usuń post", "Delete", new { id=item.id }) %>
     </fieldset>
+    
     <% } %>
     
     <% if (Model.HasPreviousPage)

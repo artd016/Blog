@@ -298,28 +298,55 @@ namespace Blog.Controllers
             return View(kom);
         }
 
-        public ActionResult DodajKom(int id)
+        public ActionResult DodajKom()
         {
             Komentarze kom = new Komentarze();
-            kom.id_posta = id;
+            
             ViewData["list"] = lista();
 
             return PartialView(kom);
         }
+
         [HttpPost]
-        public ActionResult DodajKom(int id,Komentarze kom)
+        public ActionResult DodajKom(Komentarze nkom)
         {
             if (ModelState.IsValid)
             {
-                
+                nkom.id_posta = nkom.id;//??
+                nkom.id=0;
+                nkom.data_dodania = DateTime.Now;
 
-                return View(kom);
+                blogDB.AddToKomentarze(nkom);
+                blogDB.SaveChanges();
+               
+                ViewData["list"] = lista();
+                return View();
             }
             else
             {
                 ViewData["list"] = lista();
-                return View(kom);
+                return View(nkom);
             }
         }
+
+
+        [HttpPost]
+        public ActionResult UsunKom(int id)
+        {
+            Komentarze dkom = blogDB.Komentarze.Single(dk=>dk.id==id);
+            blogDB.Komentarze.DeleteObject(dkom);
+            blogDB.SaveChanges();
+            
+            
+            var kom = from komentarze in blogDB.Komentarze
+                      where komentarze.Post.id==dkom.id_posta
+                      orderby komentarze.data_dodania descending
+                      select komentarze;
+
+            return PartialView("WysKomentarze", kom);
+        }
+
+        
+
     }
 }

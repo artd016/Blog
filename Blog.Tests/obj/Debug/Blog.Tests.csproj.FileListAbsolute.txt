@@ -14,3 +14,5 @@ C:\Documents and Settings\SQL\Moje dokumenty\Visual Studio 2010\Projects\Blog\Bl
 C:\Documents and Settings\SQL\Moje dokumenty\Visual Studio 2010\Projects\Blog\Blog\Blog.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\SQL\Moje dokumenty\Visual Studio 2010\Projects\Blog\Blog\Blog.Tests\obj\Debug\Blog.Tests.dll
 C:\Documents and Settings\SQL\Moje dokumenty\Visual Studio 2010\Projects\Blog\Blog\Blog.Tests\obj\Debug\Blog.Tests.pdb
+C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\bin\Debug\Blog.Tests.dll.CodeAnalysisLog.xml
+C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\bin\Debug\Blog.Tests.dll.lastcodeanalysissucceeded

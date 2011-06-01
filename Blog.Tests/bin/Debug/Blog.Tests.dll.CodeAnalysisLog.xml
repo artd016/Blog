@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Targets>
+  <Target Name="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\bin\Debug\Blog.Tests.dll">
+   <Modules>
+    <Module Name="blog.tests.dll">
+     <Namespaces>
+      <Namespace Name="Blog.Tests">
+       <Types>
+        <Type Name="AdministracjaControllerTest" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AdministracjaControllerConstructorTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="82">In method 'AdministracjaControllerTest.AdministracjaControllerConstructorTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="98">In method 'AdministracjaControllerTest.DeleteTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteTest1()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="120">In method 'AdministracjaControllerTest.DeleteTest1()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DodajKomTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="141">In method 'AdministracjaControllerTest.DodajKomTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DodajKomTest1()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="162">In method 'AdministracjaControllerTest.DodajKomTest1()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DodajPostTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="182">In method 'AdministracjaControllerTest.DodajPostTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DodajPostTest1()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="203">In method 'AdministracjaControllerTest.DodajPostTest1()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EditTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="223">In method 'AdministracjaControllerTest.EditTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EditTest1()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="245">In method 'AdministracjaControllerTest.EditTest1()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IndexTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="266">In method 'AdministracjaControllerTest.IndexTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#listaTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="440">In method 'AdministracjaControllerTest.listaTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PostTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="286">In method 'AdministracjaControllerTest.PostTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PostyOznaczoneTagiemTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="311">In method 'AdministracjaControllerTest.PostyOznaczoneTagiemTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SzukajTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="333">In method 'AdministracjaControllerTest.SzukajTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TagiTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="355">In method 'AdministracjaControllerTest.TagiTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UsunKomTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="376">In method 'AdministracjaControllerTest.UsunKomTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WysKomentarzeTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="397">In method 'AdministracjaControllerTest.WysKomentarzeTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WyswietlPostyTest()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AdministracjaControllerTest.cs" Line="419">In method 'AdministracjaControllerTest.WyswietlPostyTest()', call System.IDisposable.Dispose on object 'target' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Blog.Tests.Controllers">
+       <Types>
+        <Type Name="AccountControllerTest" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetAccountController()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="AccountControllerTest.cs" Line="343">In method 'AccountControllerTest.GetAccountController()', object '&lt;&gt;g__initLocalb' is not disposed along all exception paths. Call System.IDisposable.Dispose on object '&lt;&gt;g__initLocalb' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="HomeControllerTest" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#About()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="HomeControllerTest.cs" Line="32">In method 'HomeControllerTest.About()', call System.IDisposable.Dispose on object 'controller' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Index()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2011-05-30 21:47:08Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog.Tests\Controllers" File="HomeControllerTest.cs" Line="19">In method 'HomeControllerTest.Index()', call System.IDisposable.Dispose on object 'controller' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="ExceptionEdge">In method {0}, object {1} is not disposed along all exception paths. Call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

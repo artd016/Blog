@@ -74,15 +74,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BlogDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Komentarze.cs" />
     <Compile Include="Models\Post.cs" />
     <Compile Include="Models\Tagi.cs" />
-    <Compile Include="Models\ViewModelPT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\styl86.jpg" />
     <Content Include="Content\styl88.jpg" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\popup.js" />
     <Content Include="Views\Administracja\DodajKom.ascx" />
     <Content Include="Views\Administracja\DodajPost.aspx" />
     <Content Include="Views\Administracja\Index.aspx" />
@@ -169,8 +170,8 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1031</DevelopmentServerPort>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1032</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

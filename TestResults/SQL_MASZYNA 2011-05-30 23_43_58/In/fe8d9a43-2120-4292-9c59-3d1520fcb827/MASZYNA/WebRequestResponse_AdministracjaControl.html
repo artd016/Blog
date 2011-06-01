@@ -1,0 +1,140 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head><title>
+	
+    Wyświetl posty
+
+</title><link href="Content/Site.css" rel="stylesheet" type="text/css" />
+    
+    <script src="/Scripts/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="/Scripts/MicrosoftMvcAjax.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery-ui.min.js" type="text/javascript"></script>
+    
+</head>
+
+<body>
+    <div class="page">
+
+        <div id="header">
+            <div id="title">
+                <h1>Blog w MVC</h1>
+            </div>
+              
+            <div id="logindisplay">
+                 
+        [ <a href="/Account/LogOn">Log On</a> ]
+
+<br />
+<form action="/Home/Szukaj" method="post">
+    <input type="text" id="name-list" name="zapytanie"/>
+    <input type="submit" value="Szukaj" />
+    </form>
+
+    <script type="text/javascript" language="javascript">
+
+        $(function () {
+
+            $("#name-list").autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: "/Home/FindItems", type: "POST", dataType: "json",
+                        data: { searchText: request.term, maxResults: 10},
+                        success: function (data) {
+                            response($.map(data, function (item) {
+                                return { label: item, value: item }
+                            }))
+                        }
+                    })
+                }
+            });
+        });
+    </script>
+
+            </div> 
+            
+            <div id="menucontainer">
+            
+                <ul id="menu">              
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                    
+                </ul>
+            
+            </div>
+        </div>
+
+        <div id="main">
+            
+    <h2>Wyświetl posty</h2>
+    
+    
+    <fieldset>
+        <h1>
+        <a href="/Home/Post/2011/05/16/Post_z_SGML">Post z SGML</a></h1>
+        <p>
+            SGMl to ..........................
+            </p>
+        2011-05-16
+        
+        <p>
+            Opublikowany</p>
+        
+
+    </fieldset>
+    
+    <fieldset>
+        <h1>
+        <a href="/Home/Post/2011/05/15/MVC_Route">MVC Route</a></h1>
+        <p>
+            As you might guess from the section, “Serving Methods, Not Files,” in Chapter 2, this 1:1 relation
+            ...<br />
+            <a href="/Home/Post/2011/05/15/MVC_Route">Więcej</a>
+            </p>
+        2011-05-15
+        
+        <p>
+            Opublikowany</p>
+        
+
+    </fieldset>
+    
+    <fieldset>
+        <h1>
+        <a href="/Home/Post/2011/05/15/ASP.NET_MVC2">ASP.NET MVC2</a></h1>
+        <p>
+            This is a very diffi cult chapter to write. It’s not diffi cult technically, nor is there a lack o
+            ...<br />
+            <a href="/Home/Post/2011/05/15/ASP.NET_MVC2">Więcej</a>
+            </p>
+        2011-05-15
+        
+        <p>
+            Opublikowany</p>
+        
+
+    </fieldset>
+    
+    <fieldset>
+        <h1>
+        <a href="/Home/Post/2011/05/14/Pierwszy_post">Pierwszy post</a></h1>
+        <p>
+            Pierwszy post na blogu
+            </p>
+        2011-05-14
+        
+        <p>
+            Opublikowany</p>
+        
+
+    </fieldset>
+    
+
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
