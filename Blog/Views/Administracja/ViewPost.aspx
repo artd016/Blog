@@ -8,13 +8,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-<h2><%: Model.tytul %></h2>
+<h1><%: Model.tytul %></h1>
 
-<fieldset>
+<fieldset id="a_tresc_posta">
 
     <div class="display-field"><%: Model.tresc %></div>
     </fieldset>
-    <fieldset>
+    <fieldset id="a_tagi_data">
     <div class="display-label">Tagi:<% foreach (var item in ViewData["tagi"] as IEnumerable)
                                        { %><%: Html.ActionLink(item as string, "PostyOznaczoneTagiem", new { id = item })%>,<%} %> </div>
     <div class="display-label">Data dodania: <%: String.Format("{0:yyyy-MM-dd hh:mm}", Model.data_dodania) %></div>
@@ -30,8 +30,8 @@
 </fieldset>
 <p>
 
-    <%: Html.ActionLink("Edit", "Edit", new { id=Model.id }) %> |
-    <%: Html.ActionLink("Back to List", "Index") %>
+    <%: Html.ActionLink("Edytuj", "Edit", new { id=Model.id }) %> |
+    <%: Html.ActionLink("Wróć do listy postów", "WyswietlPosty") %>
 </p>
 <div id="divContactList">
 <% Html.RenderAction("WysKomentarze", "Administracja", new { id = Model.id }); %>

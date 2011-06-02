@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="acb8d9ac-54f3-4370-a84a-e345920aeefd" name="SQL@MASZYNA 2011-06-02 13:23:51" runUser="MASZYNA\SQL" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="TestSettings1" id="f1b9f467-224d-475b-85fd-330bccbd810f">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment runDeploymentRoot="SQL_MASZYNA 2011-06-02 13_23_51">
+      <DeploymentItem filename="C:\Documents and Settings\SQL\Moje dokumenty\Visual Studio 2010\Projects\Blog\Blog\bin\Blog.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific>
+        <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
+          <AssemblyResolution>
+            <TestDirectory useLoadContext="true" />
+          </AssemblyResolution>
+        </UnitTestRunConfig>
+        <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207">
+          <Browser name="Internet Explorer 7.0">
+            <Headers>
+              <Header name="User-Agent" value="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)" />
+              <Header name="Accept" value="*/*" />
+              <Header name="Accept-Language" value="{{$IEAcceptLanguage}}" />
+              <Header name="Accept-Encoding" value="GZIP" />
+            </Headers>
+          </Browser>
+        </WebTestRunConfiguration>
+      </TestTypeSpecific>
+      <AgentRule name="LocalMachineDefaultRole">
+        <DataCollectors>
+          <DataCollector uri="datacollector://microsoft/CodeCoverage/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.CodeCoverage.CoveragePlugIn, Microsoft.VisualStudio.QualityTools.Plugins.CodeCoverage, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Code Coverage" enabled="false">
+            <Configuration>
+              <CodeCoverage xmlns="">
+                <Regular>
+                  <CodeCoverageItem binaryFile="Blog.Tests\bin\Debug\Blog.Tests.dll" pdbFile="Blog.Tests\bin\Debug\Blog.Tests.pdb" instrumentInPlace="true" />
+                </Regular>
+                <AspNet>
+                  <AspNetCodeCoverageItem id="d07d4130-2983-4fea-af9c-1b98e026cdc6" name="Blog" applicationRoot="/" url="http://localhost:0/" />
+                </AspNet>
+              </CodeCoverage>
+            </Configuration>
+          </DataCollector>
+        </DataCollectors>
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-06-02T13:23:51.5591499+02:00" queuing="2011-06-02T13:24:09.3297027+02:00" start="2011-06-02T13:24:09.7503075+02:00" finish="2011-06-02T13:24:34.8063363+02:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="36" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="35" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="MASZYNA" outcome="Error" timestamp="2011-06-02T13:24:34.6561203+02:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="listaTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="a1b77401-1bd9-f9dd-387b-d29b1a396fb4">
+      <Execution id="e55f3d2a-c602-4ae8-8112-5c84b3d792b4" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="listaTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectToHomeOnSuccess_WithExternalReturnUrl" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="96c0059b-1c41-71af-f167-06e2c893db15">
+      <Execution id="83835d39-3b04-495b-99fb-e832bcad3c00" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectToHomeOnSuccess_WithExternalReturnUrl" />
+    </UnitTest>
+    <UnitTest name="SzukajTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="f5fb9af2-4042-d259-4852-58b1592b1473">
+      <Execution id="a4b24c16-1bf9-41fe-9562-c89d8c06ae75" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SzukajTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsRedirectOnSuccess" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="3af9e023-8413-9574-0efb-b3e1fec209bc">
+      <Execution id="17d2a66b-6b0b-4e7b-bbb7-0b75d96ace5c" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="Register_Get_ReturnsView" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="42e4128c-17e2-b5a9-e1d9-3b2d8668ba5a">
+      <Execution id="c259f6d4-d527-4fda-b3a0-9dc62e114a77" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="TagiTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="9601a7ae-bb3a-2892-5c39-397ef89a0b1b">
+      <Execution id="8f9c0628-5bbc-4168-b706-7333f0bbc9b0" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TagiTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="PostyOznaczoneTagiemTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="36c1186a-eb2e-948f-d256-eed6571c7eff">
+      <Execution id="a065aa29-2515-4cc1-8071-c3c6926e56f4" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PostyOznaczoneTagiemTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="LogOff_LogsOutAndRedirects" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="ae13f39b-f0eb-e24d-8d11-7a7092f2ebda">
+      <Execution id="303f22c8-140c-419c-86a5-3055a6f57f95" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOff_LogsOutAndRedirects" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfValidateUserFails" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="e89981cb-0b8b-6777-ade8-610241e20a50">
+      <Execution id="052cebe6-031e-4300-b774-3948fcb77b1b" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsViewIfValidateUserFails" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="e41f0101-44d6-db5c-c8a3-3986285f8e93">
+      <Execution id="052409c6-ec1e-4e4a-850c-e36b90e31149" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="DeleteTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="57901487-f8bf-748f-6ccf-36b062171c3a">
+      <Execution id="f166808a-2e2f-49d3-832a-2141179bc071" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="PostTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="56ce720c-2140-72d3-9655-43a8654017c6">
+      <Execution id="6db0f28c-79ff-4076-adff-b4403e0f7424" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PostTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="AdministracjaControllerConstructorTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="dc306a54-e9dc-5340-4d2d-3941cbfb0361">
+      <Execution id="1b06d530-f9ec-4f2b-a585-b237f676ae64" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AdministracjaControllerConstructorTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="EditTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="7aca6f90-688d-c81a-c5c3-437c1f101f80">
+      <Execution id="612a2281-251e-4b37-a625-9aacf71d54ba" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="EditTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="WyswietlPostyTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="991f6fa4-fa34-004e-30ea-2b458b07e203">
+      <Execution id="9c40f78d-feda-40bc-a558-fbe626d53e7c" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="WyswietlPostyTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="EditTest1" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="a9291e12-4841-3a5c-f637-09403db212c0">
+      <Execution id="b1b341cd-6265-4277-86a7-6d8cee1e8eea" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="EditTest1" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsViewIfRegistrationFails" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="a6b588d3-d7ce-097b-fb95-75cc843350ca">
+      <Execution id="c45b32e3-7f5d-4dce-8487-e5149ac43ebc" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsViewIfRegistrationFails" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="726fc13a-1bcd-9bd4-47f1-de99063f1d56">
+      <Execution id="3128ebf0-7b60-472f-b3cc-f57b8aaabb20" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" />
+    </UnitTest>
+    <UnitTest name="DodajKomTest1" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="d412c0d6-1690-c641-1834-730d981b8d59">
+      <Execution id="22adfae1-7eff-4925-9cc5-57795bc470c2" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DodajKomTest1" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="DodajPostTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="34028fde-4d77-8288-f6b5-65eb80d88710">
+      <Execution id="aef4fe6e-0bac-4f62-bfb5-f3702f0db732" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DodajPostTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="UsunKomTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="27b0148a-df20-bd81-c367-703566ba0c1b">
+      <Execution id="5cd4b992-0bc3-4bac-9fb8-fb59a921e8f0" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="UsunKomTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="DodajKomTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="909a44e7-dbd5-b822-6359-1bdd04ff8d27">
+      <Execution id="e3739767-0874-4341-96c3-8a58788f6cc0" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DodajKomTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsRedirectOnSuccess" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="d4e6421a-3e38-cc12-959f-d59f3b01bf7a">
+      <Execution id="1c55c737-f2ef-48a2-993d-a0ecda5e8c25" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsRedirectOnSuccess" />
+    </UnitTest>
+    <UnitTest name="IndexTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="daea9d66-3502-e1c8-dc48-cbb4a65f713d">
+      <Execution id="e9e6233a-608b-4a98-9ef1-64e5a4ab600f" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IndexTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="Register_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="03be8fe1-1df7-4584-1a99-5451ad0e5f58">
+      <Execution id="59952899-c4ae-4f6a-aee7-3abd6fbadbf4" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Register_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+    <UnitTest name="DeleteTest1" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="4f4207e6-8fa8-e9f1-2965-96855e8e0986">
+      <Execution id="4580091c-c21d-42d6-9ffa-056779e72edf" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DeleteTest1" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="About" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="166264b4-e92b-2a65-4c71-c1906151ba99">
+      <Execution id="a64d4174-1060-4d6f-8420-4129f5efc293" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.HomeControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Get_ReturnsView" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="5e9f54d9-4492-44ee-777f-a8420deb60ff">
+      <Execution id="3d9134d9-2a67-40bf-8ab5-1e6d6e2f4797" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="205a1e47-d331-9499-1894-53ad8f9fccab">
+      <Execution id="80c9be59-43f5-46f8-bef0-8663c5a87aec" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePassword_Post_ReturnsViewIfChangePasswordFails" />
+    </UnitTest>
+    <UnitTest name="LogOn_Get_ReturnsView" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="d805d901-f9f7-5711-074f-7866dead8a43">
+      <Execution id="9c607715-94be-43cf-9e52-602f971b236d" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Get_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="39e9bcc6-76c8-ed1a-43aa-d2aaa3dd976d">
+      <Execution id="3c67f89c-e27d-4d94-b316-7d17681df303" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.HomeControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="DodajPostTest1" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="06f23152-e28d-d479-6c9e-03c6f54bfb95">
+      <Execution id="352b9e67-0e31-4bdf-8460-611c8755a675" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DodajPostTest1" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="ChangePasswordSuccess_ReturnsView" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="4d59d669-73e8-29e9-802d-250f6e65941d">
+      <Execution id="e90cebea-0cc7-49e2-bc3f-ce672db467a4" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ChangePasswordSuccess_ReturnsView" />
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsRedirectOnSuccess_WithLocalReturnUrl" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="7869b598-25c4-1214-5dfe-33c58fa20a01">
+      <Execution id="76519dc9-3e71-448d-a609-3727fad7ebbd" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsRedirectOnSuccess_WithLocalReturnUrl" />
+    </UnitTest>
+    <UnitTest name="WysKomentarzeTest" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="06d0ff14-93ae-a42c-e02c-1f126f9257c9">
+      <Execution id="c337d0f2-8eac-43f0-8986-b010125a2801" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.AdministracjaControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="WysKomentarzeTest" />
+      <AspNet webSiteUrl="http://localhost:1032/">
+        <Host pathToWebApp="C:\Documents and Settings\SQL\Pulpit\Blog\Blog\Blog" webAppRoot="/" />
+      </AspNet>
+    </UnitTest>
+    <UnitTest name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" storage="c:\documents and settings\sql\moje dokumenty\visual studio 2010\projects\blog\blog.tests\bin\debug\blog.tests.dll" id="169a3289-f32f-07cd-cbeb-20e0414e6b97">
+      <Execution id="5986b179-8bb1-4aab-8801-100e63b2da0b" />
+      <TestMethod codeBase="C:/Documents and Settings/SQL/Moje dokumenty/Visual Studio 2010/Projects/Blog/Blog.Tests/bin/Debug/Blog.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Blog.Tests.Controllers.AccountControllerTest, Blog.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LogOn_Post_ReturnsViewIfModelStateIsInvalid" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="39e9bcc6-76c8-ed1a-43aa-d2aaa3dd976d" executionId="3c67f89c-e27d-4d94-b316-7d17681df303" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="166264b4-e92b-2a65-4c71-c1906151ba99" executionId="a64d4174-1060-4d6f-8420-4129f5efc293" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5e9f54d9-4492-44ee-777f-a8420deb60ff" executionId="3d9134d9-2a67-40bf-8ab5-1e6d6e2f4797" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d4e6421a-3e38-cc12-959f-d59f3b01bf7a" executionId="1c55c737-f2ef-48a2-993d-a0ecda5e8c25" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="205a1e47-d331-9499-1894-53ad8f9fccab" executionId="80c9be59-43f5-46f8-bef0-8663c5a87aec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e41f0101-44d6-db5c-c8a3-3986285f8e93" executionId="052409c6-ec1e-4e4a-850c-e36b90e31149" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d59d669-73e8-29e9-802d-250f6e65941d" executionId="e90cebea-0cc7-49e2-bc3f-ce672db467a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae13f39b-f0eb-e24d-8d11-7a7092f2ebda" executionId="303f22c8-140c-419c-86a5-3055a6f57f95" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d805d901-f9f7-5711-074f-7866dead8a43" executionId="9c607715-94be-43cf-9e52-602f971b236d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="726fc13a-1bcd-9bd4-47f1-de99063f1d56" executionId="3128ebf0-7b60-472f-b3cc-f57b8aaabb20" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7869b598-25c4-1214-5dfe-33c58fa20a01" executionId="76519dc9-3e71-448d-a609-3727fad7ebbd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="96c0059b-1c41-71af-f167-06e2c893db15" executionId="83835d39-3b04-495b-99fb-e832bcad3c00" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="169a3289-f32f-07cd-cbeb-20e0414e6b97" executionId="5986b179-8bb1-4aab-8801-100e63b2da0b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e89981cb-0b8b-6777-ade8-610241e20a50" executionId="052cebe6-031e-4300-b774-3948fcb77b1b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="42e4128c-17e2-b5a9-e1d9-3b2d8668ba5a" executionId="c259f6d4-d527-4fda-b3a0-9dc62e114a77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3af9e023-8413-9574-0efb-b3e1fec209bc" executionId="17d2a66b-6b0b-4e7b-bbb7-0b75d96ace5c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6b588d3-d7ce-097b-fb95-75cc843350ca" executionId="c45b32e3-7f5d-4dce-8487-e5149ac43ebc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03be8fe1-1df7-4584-1a99-5451ad0e5f58" executionId="59952899-c4ae-4f6a-aee7-3abd6fbadbf4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dc306a54-e9dc-5340-4d2d-3941cbfb0361" executionId="1b06d530-f9ec-4f2b-a585-b237f676ae64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57901487-f8bf-748f-6ccf-36b062171c3a" executionId="f166808a-2e2f-49d3-832a-2141179bc071" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f4207e6-8fa8-e9f1-2965-96855e8e0986" executionId="4580091c-c21d-42d6-9ffa-056779e72edf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="909a44e7-dbd5-b822-6359-1bdd04ff8d27" executionId="e3739767-0874-4341-96c3-8a58788f6cc0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d412c0d6-1690-c641-1834-730d981b8d59" executionId="22adfae1-7eff-4925-9cc5-57795bc470c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="34028fde-4d77-8288-f6b5-65eb80d88710" executionId="aef4fe6e-0bac-4f62-bfb5-f3702f0db732" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06f23152-e28d-d479-6c9e-03c6f54bfb95" executionId="352b9e67-0e31-4bdf-8460-611c8755a675" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7aca6f90-688d-c81a-c5c3-437c1f101f80" executionId="612a2281-251e-4b37-a625-9aacf71d54ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a9291e12-4841-3a5c-f637-09403db212c0" executionId="b1b341cd-6265-4277-86a7-6d8cee1e8eea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="daea9d66-3502-e1c8-dc48-cbb4a65f713d" executionId="e9e6233a-608b-4a98-9ef1-64e5a4ab600f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="56ce720c-2140-72d3-9655-43a8654017c6" executionId="6db0f28c-79ff-4076-adff-b4403e0f7424" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="36c1186a-eb2e-948f-d256-eed6571c7eff" executionId="a065aa29-2515-4cc1-8071-c3c6926e56f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f5fb9af2-4042-d259-4852-58b1592b1473" executionId="a4b24c16-1bf9-41fe-9562-c89d8c06ae75" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9601a7ae-bb3a-2892-5c39-397ef89a0b1b" executionId="8f9c0628-5bbc-4168-b706-7333f0bbc9b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="27b0148a-df20-bd81-c367-703566ba0c1b" executionId="5cd4b992-0bc3-4bac-9fb8-fb59a921e8f0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06d0ff14-93ae-a42c-e02c-1f126f9257c9" executionId="c337d0f2-8eac-43f0-8986-b010125a2801" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="991f6fa4-fa34-004e-30ea-2b458b07e203" executionId="9c40f78d-feda-40bc-a558-fbe626d53e7c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a1b77401-1bd9-f9dd-387b-d29b1a396fb4" executionId="e55f3d2a-c602-4ae8-8112-5c84b3d792b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3c67f89c-e27d-4d94-b316-7d17681df303" testId="39e9bcc6-76c8-ed1a-43aa-d2aaa3dd976d" testName="Index" computerName="MASZYNA" duration="00:00:24.7555968" startTime="2011-06-02T13:24:09.9005235+02:00" endTime="2011-06-02T13:24:34.6561203+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3c67f89c-e27d-4d94-b316-7d17681df303">
+    </UnitTestResult>
+    <UnitTestResult executionId="a64d4174-1060-4d6f-8420-4129f5efc293" testId="166264b4-e92b-2a65-4c71-c1906151ba99" testName="About" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a64d4174-1060-4d6f-8420-4129f5efc293">
+    </UnitTestResult>
+    <UnitTestResult executionId="3d9134d9-2a67-40bf-8ab5-1e6d6e2f4797" testId="5e9f54d9-4492-44ee-777f-a8420deb60ff" testName="ChangePassword_Get_ReturnsView" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d9134d9-2a67-40bf-8ab5-1e6d6e2f4797">
+    </UnitTestResult>
+    <UnitTestResult executionId="1c55c737-f2ef-48a2-993d-a0ecda5e8c25" testId="d4e6421a-3e38-cc12-959f-d59f3b01bf7a" testName="ChangePassword_Post_ReturnsRedirectOnSuccess" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1c55c737-f2ef-48a2-993d-a0ecda5e8c25">
+    </UnitTestResult>
+    <UnitTestResult executionId="80c9be59-43f5-46f8-bef0-8663c5a87aec" testId="205a1e47-d331-9499-1894-53ad8f9fccab" testName="ChangePassword_Post_ReturnsViewIfChangePasswordFails" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80c9be59-43f5-46f8-bef0-8663c5a87aec">
+    </UnitTestResult>
+    <UnitTestResult executionId="052409c6-ec1e-4e4a-850c-e36b90e31149" testId="e41f0101-44d6-db5c-c8a3-3986285f8e93" testName="ChangePassword_Post_ReturnsViewIfModelStateIsInvalid" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="052409c6-ec1e-4e4a-850c-e36b90e31149">
+    </UnitTestResult>
+    <UnitTestResult executionId="e90cebea-0cc7-49e2-bc3f-ce672db467a4" testId="4d59d669-73e8-29e9-802d-250f6e65941d" testName="ChangePasswordSuccess_ReturnsView" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e90cebea-0cc7-49e2-bc3f-ce672db467a4">
+    </UnitTestResult>
+    <UnitTestResult executionId="303f22c8-140c-419c-86a5-3055a6f57f95" testId="ae13f39b-f0eb-e24d-8d11-7a7092f2ebda" testName="LogOff_LogsOutAndRedirects" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="303f22c8-140c-419c-86a5-3055a6f57f95">
+    </UnitTestResult>
+    <UnitTestResult executionId="9c607715-94be-43cf-9e52-602f971b236d" testId="d805d901-f9f7-5711-074f-7866dead8a43" testName="LogOn_Get_ReturnsView" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c607715-94be-43cf-9e52-602f971b236d">
+    </UnitTestResult>
+    <UnitTestResult executionId="3128ebf0-7b60-472f-b3cc-f57b8aaabb20" testId="726fc13a-1bcd-9bd4-47f1-de99063f1d56" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithoutReturnUrl" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3128ebf0-7b60-472f-b3cc-f57b8aaabb20">
+    </UnitTestResult>
+    <UnitTestResult executionId="76519dc9-3e71-448d-a609-3727fad7ebbd" testId="7869b598-25c4-1214-5dfe-33c58fa20a01" testName="LogOn_Post_ReturnsRedirectOnSuccess_WithLocalReturnUrl" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="76519dc9-3e71-448d-a609-3727fad7ebbd">
+    </UnitTestResult>
+    <UnitTestResult executionId="83835d39-3b04-495b-99fb-e832bcad3c00" testId="96c0059b-1c41-71af-f167-06e2c893db15" testName="LogOn_Post_ReturnsRedirectToHomeOnSuccess_WithExternalReturnUrl" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83835d39-3b04-495b-99fb-e832bcad3c00">
+    </UnitTestResult>
+    <UnitTestResult executionId="5986b179-8bb1-4aab-8801-100e63b2da0b" testId="169a3289-f32f-07cd-cbeb-20e0414e6b97" testName="LogOn_Post_ReturnsViewIfModelStateIsInvalid" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5986b179-8bb1-4aab-8801-100e63b2da0b">
+    </UnitTestResult>
+    <UnitTestResult executionId="052cebe6-031e-4300-b774-3948fcb77b1b" testId="e89981cb-0b8b-6777-ade8-610241e20a50" testName="LogOn_Post_ReturnsViewIfValidateUserFails" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="052cebe6-031e-4300-b774-3948fcb77b1b">
+    </UnitTestResult>
+    <UnitTestResult executionId="c259f6d4-d527-4fda-b3a0-9dc62e114a77" testId="42e4128c-17e2-b5a9-e1d9-3b2d8668ba5a" testName="Register_Get_ReturnsView" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c259f6d4-d527-4fda-b3a0-9dc62e114a77">
+    </UnitTestResult>
+    <UnitTestResult executionId="17d2a66b-6b0b-4e7b-bbb7-0b75d96ace5c" testId="3af9e023-8413-9574-0efb-b3e1fec209bc" testName="Register_Post_ReturnsRedirectOnSuccess" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="17d2a66b-6b0b-4e7b-bbb7-0b75d96ace5c">
+    </UnitTestResult>
+    <UnitTestResult executionId="c45b32e3-7f5d-4dce-8487-e5149ac43ebc" testId="a6b588d3-d7ce-097b-fb95-75cc843350ca" testName="Register_Post_ReturnsViewIfRegistrationFails" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c45b32e3-7f5d-4dce-8487-e5149ac43ebc">
+    </UnitTestResult>
+    <UnitTestResult executionId="59952899-c4ae-4f6a-aee7-3abd6fbadbf4" testId="03be8fe1-1df7-4584-1a99-5451ad0e5f58" testName="Register_Post_ReturnsViewIfModelStateIsInvalid" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59952899-c4ae-4f6a-aee7-3abd6fbadbf4">
+    </UnitTestResult>
+    <UnitTestResult executionId="1b06d530-f9ec-4f2b-a585-b237f676ae64" testId="dc306a54-e9dc-5340-4d2d-3941cbfb0361" testName="AdministracjaControllerConstructorTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b06d530-f9ec-4f2b-a585-b237f676ae64">
+    </UnitTestResult>
+    <UnitTestResult executionId="f166808a-2e2f-49d3-832a-2141179bc071" testId="57901487-f8bf-748f-6ccf-36b062171c3a" testName="DeleteTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f166808a-2e2f-49d3-832a-2141179bc071">
+    </UnitTestResult>
+    <UnitTestResult executionId="4580091c-c21d-42d6-9ffa-056779e72edf" testId="4f4207e6-8fa8-e9f1-2965-96855e8e0986" testName="DeleteTest1" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4580091c-c21d-42d6-9ffa-056779e72edf">
+    </UnitTestResult>
+    <UnitTestResult executionId="e3739767-0874-4341-96c3-8a58788f6cc0" testId="909a44e7-dbd5-b822-6359-1bdd04ff8d27" testName="DodajKomTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e3739767-0874-4341-96c3-8a58788f6cc0">
+    </UnitTestResult>
+    <UnitTestResult executionId="22adfae1-7eff-4925-9cc5-57795bc470c2" testId="d412c0d6-1690-c641-1834-730d981b8d59" testName="DodajKomTest1" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="22adfae1-7eff-4925-9cc5-57795bc470c2">
+    </UnitTestResult>
+    <UnitTestResult executionId="aef4fe6e-0bac-4f62-bfb5-f3702f0db732" testId="34028fde-4d77-8288-f6b5-65eb80d88710" testName="DodajPostTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aef4fe6e-0bac-4f62-bfb5-f3702f0db732">
+    </UnitTestResult>
+    <UnitTestResult executionId="352b9e67-0e31-4bdf-8460-611c8755a675" testId="06f23152-e28d-d479-6c9e-03c6f54bfb95" testName="DodajPostTest1" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="352b9e67-0e31-4bdf-8460-611c8755a675">
+    </UnitTestResult>
+    <UnitTestResult executionId="612a2281-251e-4b37-a625-9aacf71d54ba" testId="7aca6f90-688d-c81a-c5c3-437c1f101f80" testName="EditTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="612a2281-251e-4b37-a625-9aacf71d54ba">
+    </UnitTestResult>
+    <UnitTestResult executionId="b1b341cd-6265-4277-86a7-6d8cee1e8eea" testId="a9291e12-4841-3a5c-f637-09403db212c0" testName="EditTest1" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b1b341cd-6265-4277-86a7-6d8cee1e8eea">
+    </UnitTestResult>
+    <UnitTestResult executionId="e9e6233a-608b-4a98-9ef1-64e5a4ab600f" testId="daea9d66-3502-e1c8-dc48-cbb4a65f713d" testName="IndexTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9e6233a-608b-4a98-9ef1-64e5a4ab600f">
+    </UnitTestResult>
+    <UnitTestResult executionId="6db0f28c-79ff-4076-adff-b4403e0f7424" testId="56ce720c-2140-72d3-9655-43a8654017c6" testName="PostTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6db0f28c-79ff-4076-adff-b4403e0f7424">
+    </UnitTestResult>
+    <UnitTestResult executionId="a065aa29-2515-4cc1-8071-c3c6926e56f4" testId="36c1186a-eb2e-948f-d256-eed6571c7eff" testName="PostyOznaczoneTagiemTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a065aa29-2515-4cc1-8071-c3c6926e56f4">
+    </UnitTestResult>
+    <UnitTestResult executionId="a4b24c16-1bf9-41fe-9562-c89d8c06ae75" testId="f5fb9af2-4042-d259-4852-58b1592b1473" testName="SzukajTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4b24c16-1bf9-41fe-9562-c89d8c06ae75">
+    </UnitTestResult>
+    <UnitTestResult executionId="8f9c0628-5bbc-4168-b706-7333f0bbc9b0" testId="9601a7ae-bb3a-2892-5c39-397ef89a0b1b" testName="TagiTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f9c0628-5bbc-4168-b706-7333f0bbc9b0">
+    </UnitTestResult>
+    <UnitTestResult executionId="5cd4b992-0bc3-4bac-9fb8-fb59a921e8f0" testId="27b0148a-df20-bd81-c367-703566ba0c1b" testName="UsunKomTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5cd4b992-0bc3-4bac-9fb8-fb59a921e8f0">
+    </UnitTestResult>
+    <UnitTestResult executionId="c337d0f2-8eac-43f0-8986-b010125a2801" testId="06d0ff14-93ae-a42c-e02c-1f126f9257c9" testName="WysKomentarzeTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c337d0f2-8eac-43f0-8986-b010125a2801">
+    </UnitTestResult>
+    <UnitTestResult executionId="9c40f78d-feda-40bc-a558-fbe626d53e7c" testId="991f6fa4-fa34-004e-30ea-2b458b07e203" testName="WyswietlPostyTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c40f78d-feda-40bc-a558-fbe626d53e7c">
+    </UnitTestResult>
+    <UnitTestResult executionId="e55f3d2a-c602-4ae8-8112-5c84b3d792b4" testId="a1b77401-1bd9-f9dd-387b-d29b1a396fb4" testName="listaTest" computerName="MASZYNA" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e55f3d2a-c602-4ae8-8112-5c84b3d792b4">
+    </UnitTestResult>
+  </Results>
+</TestRun>

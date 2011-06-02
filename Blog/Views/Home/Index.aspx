@@ -4,11 +4,10 @@
     Wyświetl posty
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Wyświetl posty</h2>
     <%:ViewData["komunikat"] %>
     <% foreach (var item in Model)
        { %>
-    <fieldset>
+    <fieldset id="h_post_na_glownej">
         <h1>
         <%int y=item.data_dodania.Year; %>
         <%string m=Convert.ToString(item.data_dodania.Month); %>

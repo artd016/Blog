@@ -12,8 +12,7 @@
      });
 	</script>  -->
     
-    <h2>Wyświetl posty</h2>
-    <p>
+    <p id="a_link_dodaj_posta">
         <%: Html.ActionLink("Dodaj post", "DodajPost") %>
     </p>
     <%:ViewData["komunikat"] %>
@@ -21,7 +20,7 @@
     <% foreach (var item in Model)
        { %>
        
-    <fieldset>
+    <fieldset id="a_post_na_glownej">
         <h1>
         <!--<script type="text/javascript">
 
@@ -69,7 +68,7 @@ function () {
         <p>
             Ukryty</p>
         <%} %>
-        <%: Html.ActionLink("Edytuj post", "Edit", new { id=item.id }) %>
+        <%: Html.ActionLink("Edytuj post", "Edit", new { id=item.id }) %> |
         <%: Html.ActionLink("Usuń post", "Delete", new { id=item.id }) %>
     </fieldset>
    

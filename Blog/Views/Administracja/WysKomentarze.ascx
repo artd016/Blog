@@ -1,18 +1,18 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<dynamic>" %>
 <script src="<%: Url.Content("~/Scripts/popup.js") %>" type="text/javascript"></script>
-<fieldset>
+<fieldset id="komenty">
     <legend>Komentarze</legend>
     <br />
     <%:ViewData["komunikat"]%>
 
     <% foreach (var item in Model)
        { %>
-    <fieldset>
-        <table>
+    <fieldset id="komentarz">
+        <table id="tabela_komentarza">
             <tr>
                 <td>
-                    <h5>
-                        <%:item.tresc%></h5>
+
+                        <%:item.tresc%>
                     
                 </td>
                 <td>
@@ -24,9 +24,9 @@
             </tr>
         </table>
         Data dodania:
-        <%:String.Format("{0:yyyy-MM-dd hh:mm:ss}", item.data_dodania)%>
+        <%:String.Format("{0:yyyy-MM-dd hh:mm:ss}", item.data_dodania)%> | 
         Autor:
-        <%:item.autor%>
+        <%:item.autor%> | 
         Status:
         <%if (item.status == 0)
           { %>

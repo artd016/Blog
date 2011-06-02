@@ -4,8 +4,7 @@
     Dodaj post
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>
-        Dodaj post</h2>
+
     <script src="<%: Url.Content("~/Scripts/jquery.validate.min.js") %>" type="text/javascript"></script>
     <script src="<%: Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js") %>"
         type="text/javascript"></script>
@@ -27,7 +26,7 @@
         <div class="editor-label">
             <%: Html.LabelFor(model => model.tresc) %>
         </div>
-        <div class="text-box.multi-line">
+        <div class="text-box.multi-line" >
             <%: Html.TextAreaFor(model => model.tresc) %>
             <%: Html.ValidationMessageFor(model => model.tresc) %>
         </div>
