@@ -33,9 +33,9 @@
         <div class="editor-field">
             <%: Html.DropDownList("status", ViewData["list"] as SelectList)%>
         </div>
-
+        <br />
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Dodaj" />
         </p>
     </fieldset>
 <% } %>
