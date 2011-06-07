@@ -100,6 +100,7 @@
     <Content Include="Views\Administracja\WyswietlPosty.aspx" />
     <Content Include="Views\Home\Post.aspx" />
     <Content Include="Views\Home\ViewPost.aspx" />
+    <Content Include="Views\Home\WysKomentarze.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

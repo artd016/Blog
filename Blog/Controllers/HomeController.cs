@@ -158,15 +158,19 @@ namespace Blog.Controllers
             return View("Index", strPost);
         }
 
-        public ActionResult WyswietlPosty(int page = 0)
+        [ChildActionOnly]
+        public ActionResult WysKomentarze(int id, int page = 0)
         {
-            var posty = from posts in blogDB.Post where posts.status==0
-                        orderby posts.data_dodania descending
-                        select posts;
+            var kom = from komentarze in blogDB.Komentarze
+                      where komentarze.Post.id == id &komentarze.status==0
+                      orderby komentarze.data_dodania descending
+                      select komentarze;
 
-            var strPosty = new PaginatedList<Post>(posty, page, pageSize);
+            if (kom.Count() == 0)
+                ViewData["komunikat"] = "Brak komentarzów";
 
-            return View(strPosty);
+            // var strKomentarze = new PaginatedList<Komentarze>(kom, page, pageSize);
+            return View(kom);
         }
     }
 }

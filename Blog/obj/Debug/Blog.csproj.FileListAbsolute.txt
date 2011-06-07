@@ -13,3 +13,8 @@ C:\Documents and Settings\SQL\Moje dokumenty\Visual Studio 2010\Projects\Blog\Bl
 C:\Documents and Settings\SQL\Moje dokumenty\Visual Studio 2010\Projects\Blog\Blog\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\SQL\Moje dokumenty\Visual Studio 2010\Projects\Blog\Blog\obj\Debug\Blog.dll
 C:\Documents and Settings\SQL\Moje dokumenty\Visual Studio 2010\Projects\Blog\Blog\obj\Debug\Blog.pdb
+C:\Documents and Settings\SQL\Blog\Blog\bin\Blog.dll
+C:\Documents and Settings\SQL\Blog\Blog\bin\Blog.pdb
+C:\Documents and Settings\SQL\Blog\Blog\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\SQL\Blog\Blog\obj\Debug\Blog.dll
+C:\Documents and Settings\SQL\Blog\Blog\obj\Debug\Blog.pdb
