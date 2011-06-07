@@ -172,5 +172,11 @@ namespace Blog.Controllers
             // var strKomentarze = new PaginatedList<Komentarze>(kom, page, pageSize);
             return View(kom);
         }
+        public ActionResult DodajKom()
+        {
+            Komentarze kom = new Komentarze();
+
+            return PartialView(kom);
+        }
     }
 }
