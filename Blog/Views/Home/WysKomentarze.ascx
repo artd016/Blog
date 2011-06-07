@@ -22,7 +22,7 @@
         <%:String.Format("{0:yyyy-MM-dd hh:mm:ss}", item.data_dodania)%> | 
         Autor:
         <%:item.autor%> | 
-        
+        <% Html.RenderAction("DodajKom"); %>
     </fieldset>
     <% } %>
     <%--<% if (Model.HasPreviousPage)
