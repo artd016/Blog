@@ -29,6 +29,8 @@
 
     <%: Html.ActionLink("Wróć do listy wpisów", "Index") %>
 </p>
-
+<div id="divContactList">
+<% Html.RenderAction("WysKomentarze", "Home", new { id = Model.id }); %>
+</div>
 </asp:Content>
 
