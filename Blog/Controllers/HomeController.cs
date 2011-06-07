@@ -157,5 +157,16 @@ namespace Blog.Controllers
 
             return View("Index", strPost);
         }
+
+        public ActionResult WyswietlPosty(int page = 0)
+        {
+            var posty = from posts in blogDB.Post where posts.status==0
+                        orderby posts.data_dodania descending
+                        select posts;
+
+            var strPosty = new PaginatedList<Post>(posty, page, pageSize);
+
+            return View(strPosty);
+        }
     }
 }
