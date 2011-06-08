@@ -96,6 +96,7 @@
     <Content Include="Views\Administracja\Index.aspx" />
     <Content Include="Views\Administracja\Post.aspx" />
     <Content Include="Views\Administracja\Tagi.aspx" />
+    <Content Include="Views\Administracja\UsunPost.aspx" />
     <Content Include="Views\Administracja\ViewPost.aspx" />
     <Content Include="Views\Administracja\WysKomentarze.ascx" />
     <Content Include="Views\Administracja\WyswietlPosty.aspx" />
