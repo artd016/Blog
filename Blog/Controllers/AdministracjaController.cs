@@ -219,9 +219,10 @@ namespace Blog.Controllers
         //
         // GET: /Administracja/Edit/5
 
-        public ActionResult Edit(int id)
+        public ActionResult EdytujPost(int id)
         {
-            return View();
+            Post post = blogDB.Post.Single(p => p.id == id);
+            return View(post);
         }
 
         //
