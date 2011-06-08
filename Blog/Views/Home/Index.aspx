@@ -29,7 +29,7 @@
         <%: String.Format("{0:yyyy-MM-dd}", item.data_dodania) %>
         <%if (item.data_modyfikacji != null)
           { %>
-        <%: String.Format("{0:yyyy-MM-dd}}", item.data_modyfikacji)%>
+        <%: String.Format("{0:yyyy-MM-dd}", item.data_modyfikacji)%>
         <%} %>
         <%if (item.status == 0)
           { %>
