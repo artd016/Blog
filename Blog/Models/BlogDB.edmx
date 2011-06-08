@@ -180,7 +180,9 @@
           <Property Name="wartosc" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <Association Name="FK_Komentarze_Post">
-          <End Role="Post" Type="BlogModel.Post" Multiplicity="1" />
+          <End Role="Post" Type="BlogModel.Post" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Komentarze" Type="BlogModel.Komentarze" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Post">
@@ -192,7 +194,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Tagi_Tagi">
-          <End Role="Post" Type="BlogModel.Post" Multiplicity="1" />
+          <End Role="Post" Type="BlogModel.Post" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Tagi" Type="BlogModel.Tagi" Multiplicity="*" >
           </End>
           <ReferentialConstraint>

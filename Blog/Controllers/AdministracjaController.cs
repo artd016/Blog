@@ -261,17 +261,18 @@ namespace Blog.Controllers
         // POST: /Administracja/Delete/5
 
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult UsunPost(Post collection)
         {
             try
             {
-                // TODO: Add delete logic here
+                blogDB.DeleteObject(collection);
+                blogDB.SaveChanges();
 
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View("Error");
             }
         }
         [HttpPost]
