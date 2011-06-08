@@ -30,7 +30,7 @@
 </fieldset>
 <p>
 
-    <%: Html.ActionLink("Edytuj", "Edit", new { id=Model.id }) %> |
+    <%: Html.ActionLink("Edytuj", "EdytujPost", new { id = Model.id })%> |
     <%: Html.ActionLink("Wróć do listy postów", "WyswietlPosty") %>
 </p>
 <div id="divContactList">

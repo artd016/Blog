@@ -68,7 +68,7 @@ function () {
         <p>
             Ukryty</p>
         <%} %>
-        <%: Html.ActionLink("Edytuj post", "Edit", new { id=item.id }) %> |
+        <%: Html.ActionLink("Edytuj post", "EdytujPost", new { id = item.id })%> |
         <%: Html.ActionLink("Usuń post", "Delete", new { id=item.id }) %>
     </fieldset>
    
