@@ -25,7 +25,7 @@
             <%: Html.EditorFor(model => model.data_dodania) %>
             <%: Html.ValidationMessageFor(model => model.data_dodania) %>
         </div>
-
+        <br />
         <div class="editor-label">
             <%: Html.LabelFor(model => model.tytul) %>
         </div>
@@ -33,7 +33,7 @@
             <%: Html.EditorFor(model => model.tytul) %>
             <%: Html.ValidationMessageFor(model => model.tytul) %>
         </div>
-
+        <br />
         <div class="editor-label">
             <%: Html.LabelFor(model => model.tresc) %>
         </div>
@@ -41,7 +41,7 @@
             <%: Html.EditorFor(model => model.tresc) %>
             <%: Html.ValidationMessageFor(model => model.tresc) %>
         </div>
-
+        <br />
         <div class="editor-label">
             <%: Html.LabelFor(model => model.data_modyfikacji) %>
         </div>
@@ -49,7 +49,7 @@
             <%: Html.EditorFor(model => model.data_modyfikacji) %>
             <%: Html.ValidationMessageFor(model => model.data_modyfikacji) %>
         </div>
-
+        <br />
         <div class="editor-field">
             <%: Html.DropDownList("status", ViewData["list"] as SelectList)%>
         </div>
