@@ -40,7 +40,7 @@ function () {
         <%if (d.Length == 1) d="0"+d; %>
             <%: Html.ActionLink(item.tytul as string, "Post" + "/" + y + "/" + m + "/" + d, new { id = item.tytul.Replace(' ', '_')})%>           
             </h1>
-            <p><a href="#" id="link<%:item.id%>">kliknij</a></p>
+           <!-- <p><a href="#" id="link<%:item.id%>">kliknij</a></p>-->
 
         <p id="more<%:item.id%>">
             <%if ((item.tresc as string).Length > 99)
