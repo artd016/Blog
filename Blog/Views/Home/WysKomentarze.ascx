@@ -21,8 +21,8 @@
         Data dodania:
         <%:String.Format("{0:yyyy-MM-dd hh:mm:ss}", item.data_dodania)%> | 
         Autor:
-        <%:item.autor%> | 
-        <% Html.RenderAction("DodajKom"); %>
+        <%:item.autor%> 
+        
     </fieldset>
     <% } %>
     <%--<% if (Model.HasPreviousPage)
@@ -41,7 +41,7 @@ new { page = (Model.PageIndex + 1) })%>
     <input type="submit" value="Dodaj komentarz"/></div>
 <div id="popupContact">
     <a id="popupContactClose">x</a>
-    
+    <% Html.RenderAction("DodajKom"); %>
 </div>
 <div id="backgroundPopup">
 </div>
