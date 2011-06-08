@@ -230,18 +230,22 @@ namespace Blog.Controllers
         // POST: /Administracja/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult EdytujPost(Post collection)
         {
-            try
+            Post post = blogDB.Post.Single(p => p.id == collection.id);
+            if (ModelState.IsValid)
             {
-                // TODO: Add update logic here
+                collection.data_modyfikacji = DateTime.Now;
 
+                post = collection;
+                blogDB.Post.ApplyCurrentValues(post);
+                blogDB.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            ViewData["list"] = lista();
+
+            return View(collection);
         }
 
         //
