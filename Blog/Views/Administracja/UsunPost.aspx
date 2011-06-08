@@ -1,4 +1,4 @@
-ï»¿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Blog.Models.Post>" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Blog.Models.Post>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     UsunPost
@@ -8,7 +8,7 @@
 
 <h2>UsunPost</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Czy na pewno chcesz usun¹æ ten post?h3>
 <fieldset>
     <legend>Post</legend>
 
