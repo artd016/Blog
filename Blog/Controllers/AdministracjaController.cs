@@ -265,7 +265,8 @@ namespace Blog.Controllers
         {
             try
             {
-                blogDB.DeleteObject(collection);
+                var post = blogDB.Post.Include("Komentarze").Include("Tagi").Single(p => p.id == collection.id);
+                blogDB.DeleteObject(post);
                 blogDB.SaveChanges();
 
                 return RedirectToAction("Index");
