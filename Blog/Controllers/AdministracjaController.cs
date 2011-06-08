@@ -251,9 +251,10 @@ namespace Blog.Controllers
         //
         // GET: /Administracja/Delete/5
 
-        public ActionResult Delete(int id)
+        public ActionResult UsunPost(int id)
         {
-            return View();
+            Post post = blogDB.Post.Single(p => p.id == id);
+            return View(post);
         }
 
         //
