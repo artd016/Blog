@@ -178,5 +178,25 @@ namespace Blog.Controllers
 
             return PartialView(kom);
         }
+
+        [HttpPost]
+        public ActionResult DodajKom(Komentarze nkom)
+        {
+            if (ModelState.IsValid)
+            {
+                nkom.id_posta = nkom.id;//??
+                nkom.id = 0;
+                nkom.data_dodania = DateTime.Now;
+
+                blogDB.AddToKomentarze(nkom);
+                blogDB.SaveChanges();
+
+                return View();
+            }
+            else
+            {
+                return View(nkom);
+            }
+        }
     }
 }
