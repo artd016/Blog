@@ -193,7 +193,8 @@
         </Association>
         <Association Name="FK_Tagi_Tagi">
           <End Role="Post" Type="BlogModel.Post" Multiplicity="1" />
-          <End Role="Tagi" Type="BlogModel.Tagi" Multiplicity="*" />
+          <End Role="Tagi" Type="BlogModel.Tagi" Multiplicity="*" >
+          </End>
           <ReferentialConstraint>
             <Principal Role="Post">
               <PropertyRef Name="id" />
@@ -265,7 +266,7 @@
     <Diagrams>
       <Diagram Name="BlogDB">
         <EntityTypeShape EntityType="BlogModel.Komentarze" Width="1.5" PointX="3" PointY="1" Height="2.0853483072916674" IsExpanded="true" />
-        <EntityTypeShape EntityType="BlogModel.Post" Width="1.5" PointX="0.75" PointY="2.25" Height="2.2496956380208331" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlogModel.Post" Width="1.5" PointX="0.75" PointY="2.25" Height="2.2496956380208326" IsExpanded="true" />
         <EntityTypeShape EntityType="BlogModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" Height="1.7566536458333326" IsExpanded="true" />
         <EntityTypeShape EntityType="BlogModel.Tagi" Width="1.5" PointX="3" PointY="3.875" Height="1.7566536458333335" IsExpanded="true" />
         <EntityTypeShape EntityType="BlogModel.Ustawienia" Width="1.5" PointX="5.75" PointY="3.75" Height="1.4279589843749996" IsExpanded="true" />
@@ -274,8 +275,8 @@
           <ConnectorPoint PointX="3" PointY="2.6676741536458337" />
         </AssociationConnector>
         <AssociationConnector Association="BlogModel.FK_Tagi_Tagi" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="4.1873478190104167" />
-          <ConnectorPoint PointX="3" PointY="4.1873478190104167" />
+          <ConnectorPoint PointX="2.25" PointY="4.1873478190104159" />
+          <ConnectorPoint PointX="3" PointY="4.1873478190104159" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>
