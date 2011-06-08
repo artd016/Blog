@@ -92,6 +92,7 @@
     <Content Include="Scripts\popup.js" />
     <Content Include="Views\Administracja\DodajKom.ascx" />
     <Content Include="Views\Administracja\DodajPost.aspx" />
+    <Content Include="Views\Administracja\EdytujPost.aspx" />
     <Content Include="Views\Administracja\Index.aspx" />
     <Content Include="Views\Administracja\Post.aspx" />
     <Content Include="Views\Administracja\Tagi.aspx" />

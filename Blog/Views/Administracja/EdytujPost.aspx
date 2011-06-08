@@ -50,12 +50,8 @@
             <%: Html.ValidationMessageFor(model => model.data_modyfikacji) %>
         </div>
 
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.status) %>
-        </div>
         <div class="editor-field">
-            <%: Html.EditorFor(model => model.status) %>
-            <%: Html.ValidationMessageFor(model => model.status) %>
+            <%: Html.DropDownList("status", ViewData["list"] as SelectList)%>
         </div>
 
         <p>

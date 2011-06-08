@@ -222,6 +222,7 @@ namespace Blog.Controllers
         public ActionResult EdytujPost(int id)
         {
             Post post = blogDB.Post.Single(p => p.id == id);
+            ViewData["list"] = lista();
             return View(post);
         }
 
