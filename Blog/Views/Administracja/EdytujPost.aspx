@@ -19,14 +19,6 @@
         <%: Html.HiddenFor(model => model.id) %>
 
         <div class="editor-label">
-            <%: Html.LabelFor(model => model.data_dodania) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.data_dodania) %>
-            <%: Html.ValidationMessageFor(model => model.data_dodania) %>
-        </div>
-        <br />
-        <div class="editor-label">
             <%: Html.LabelFor(model => model.tytul) %>
         </div>
         <div class="editor-field">
@@ -42,18 +34,10 @@
             <%: Html.ValidationMessageFor(model => model.tresc) %>
         </div>
         <br />
-        <div class="editor-label">
-            <%: Html.LabelFor(model => model.data_modyfikacji) %>
-        </div>
-        <div class="editor-field">
-            <%: Html.EditorFor(model => model.data_modyfikacji) %>
-            <%: Html.ValidationMessageFor(model => model.data_modyfikacji) %>
-        </div>
-        <br />
         <div class="editor-field">
             <%: Html.DropDownList("status", ViewData["list"] as SelectList)%>
         </div>
-
+        <br />
         <p>
             <input type="submit" value="Zapisz" />
         </p>
