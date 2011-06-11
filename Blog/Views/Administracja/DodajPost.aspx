@@ -23,6 +23,7 @@
             <%: Html.EditorFor(model => model.tytul) %>
             <%: Html.ValidationMessageFor(model => model.tytul) %>
         </div>
+        <br />
         <div class="editor-label">
             <%: Html.LabelFor(model => model.tresc) %>
         </div>
@@ -30,12 +31,14 @@
             <%: Html.TextAreaFor(model => model.tresc, new {id="wpisywanie_posta"}) %>
             <%: Html.ValidationMessageFor(model => model.tresc) %>
         </div>
+        <br />
         <div class="editor-label">
             <%: Html.LabelFor(model => model.status) %>
         </div>
         <div class="editor-field">
             <%: Html.DropDownList("status", ViewData["list"] as SelectList)%>
         </div>
+        <br />
         <p>
             <input type="submit" value="Dodaj post" />
         </p>
